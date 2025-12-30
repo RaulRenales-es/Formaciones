@@ -192,3 +192,6 @@ Clonado **bit a bit (sector a sector)** de un disco físico en Windows.
 .\analizar-eventlog.ps1
 .\procesos-sospechosos.ps1
 .\timeline.ps1 -DaysBack 14
+.\acquire_memory.ps1 -CaseTag "INC-2025-001"
+.\clone_disk_bitwise.ps1 -SourceDiskNumber 1 -OutputImagePath "D:\Evidencias\disk1.img"
+
