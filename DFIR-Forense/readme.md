@@ -31,7 +31,7 @@ DFIR-Forense/
 - macOS/
 
 
-##Cada sistema operativo incluye scripts para:
+Cada sistema operativo incluye scripts para:
 
 - Triage forense
 - Detección de persistencia
