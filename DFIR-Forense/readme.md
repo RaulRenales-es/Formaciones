@@ -26,12 +26,12 @@ Los scripts aquí incluidos son **técnicamente válidos para su uso en investig
 El repositorio se estructura por **sistema operativo**, manteniendo una metodología común:
 
 DFIR-Forense/
-├── Linux/
-├── Windows/
-└── macOS/
+- Linux/
+- Windows/
+- macOS/
 
 
-Cada sistema operativo incluye scripts para:
+##Cada sistema operativo incluye scripts para:
 
 - Triage forense
 - Detección de persistencia
