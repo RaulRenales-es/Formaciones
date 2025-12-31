@@ -1,4 +1,4 @@
-# detection_tips.md  
+ 
 ## Detección de ataques Living off the Land (LotL / LOLBins)
 
 ---
