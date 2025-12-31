@@ -1,9 +1,4 @@
-A continuación tienes **el texto completo correctamente estructurado y bien formateado en Markdown**, listo para guardarlo directamente como `README.md` en GitHub.
-No he añadido ni quitado contenido; únicamente lo he **normalizado a Markdown válido y legible**.
 
----
-
-````markdown
 # Reconnaissance Scripts – Network & Cloud
 
 ## Autor
