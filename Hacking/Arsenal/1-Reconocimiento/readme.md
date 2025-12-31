@@ -1,3 +1,9 @@
+A continuación tienes **el texto completo correctamente estructurado y bien formateado en Markdown**, listo para guardarlo directamente como `README.md` en GitHub.
+No he añadido ni quitado contenido; únicamente lo he **normalizado a Markdown válido y legible**.
+
+---
+
+````markdown
 # Reconnaissance Scripts – Network & Cloud
 
 ## Autor
@@ -36,167 +42,176 @@ recon/
 ├── dns_enum.sh
 ├── web_fingerprint.sh
 └── cloud_metadata_enum.sh
-```
+````
 
+---
 
-##network_recon.sh
-Objetivo
-Obtener una visión general de la red local desde un sistema Linux comprometido.
+## network_recon.sh
 
-Qué hace
-Enumera interfaces y direcciones IP
-Obtiene rutas y gateways
-Lista conexiones activas y puertos en escucha
-Extrae la tabla ARP
-Realiza un ping sweep controlado de la red local
+### Objetivo
 
-Qué aprende el alumno
-Identificar otros activos en la red
+Obtener una **visión general de la red local** desde un sistema Linux comprometido.
 
-Detectar servicios expuestos
+### Qué hace
 
-Evitar herramientas ruidosas como nmap
+* Enumera interfaces y direcciones IP
+* Obtiene rutas y gateways
+* Lista conexiones activas y puertos en escucha
+* Extrae la tabla ARP
+* Realiza un **ping sweep controlado** de la red local
 
-Detección defensiva
-Tráfico ICMP anómalo
+### Qué aprende el alumno
 
-Consultas ARP inusuales
+* Identificar otros activos en la red
+* Detectar servicios expuestos
+* Evitar herramientas ruidosas como `nmap`
 
-Uso de ss / netstat
+### Detección defensiva
 
-##network_recon.ps1
-Objetivo
-Realizar reconocimiento de red en entornos Windows usando únicamente cmdlets nativos.
+* Tráfico ICMP anómalo
+* Consultas ARP inusuales
+* Uso de `ss` / `netstat`
 
-Qué hace
-Enumera configuración IP y rutas
+---
 
-Extrae conexiones TCP activas
+## network_recon.ps1
 
-Detecta puertos en escucha
+### Objetivo
 
-Identifica dominio y contexto del host
+Realizar reconocimiento de red en **entornos Windows** usando únicamente **cmdlets nativos**.
 
-Ejecuta un ping sweep de bajo impacto
+### Qué hace
 
-Qué aprende el alumno
-Reconocimiento interno sin herramientas externas
+* Enumera configuración IP y rutas
+* Extrae conexiones TCP activas
+* Detecta puertos en escucha
+* Identifica dominio y contexto del host
+* Ejecuta un ping sweep de bajo impacto
 
-Correlación con eventos de firewall y Sysmon
+### Qué aprende el alumno
 
-Detección defensiva
-Eventos ICMP
+* Reconocimiento interno sin herramientas externas
+* Correlación con eventos de firewall y Sysmon
 
-Uso anómalo de Get-NetTCPConnection
+### Detección defensiva
 
-Tráfico lateral temprano
+* Eventos ICMP
+* Uso anómalo de `Get-NetTCPConnection`
+* Tráfico lateral temprano
 
-##dns_enum.sh
-Objetivo
-Enumerar información DNS interna y externa de forma pasiva.
+---
 
-Qué hace
-Analiza la configuración DNS local
+## dns_enum.sh
 
-Detecta dominio
+### Objetivo
 
-Enumera servidores DNS
+Enumerar **información DNS interna y externa** de forma pasiva.
 
-Resuelve registros comunes (A, MX, SRV)
+### Qué hace
 
-Identifica posibles Domain Controllers
+* Analiza la configuración DNS local
+* Detecta dominio
+* Enumera servidores DNS
+* Resuelve registros comunes (A, MX, SRV)
+* Identifica posibles **Domain Controllers**
+* Realiza reverse DNS desde la tabla ARP
 
-Realiza reverse DNS desde la tabla ARP
+### Qué aprende el alumno
 
-Qué aprende el alumno
-Descubrimiento de dominios internos
+* Descubrimiento de dominios internos
+* Identificación temprana de Active Directory
+* Relación DNS ↔ infraestructura crítica
 
-Identificación temprana de Active Directory
+### Detección defensiva
 
-Relación DNS ↔ infraestructura crítica
+* Consultas DNS SRV
+* Resoluciones repetidas de nombres internos
 
-Detección defensiva
-Consultas DNS SRV
+---
 
-Resoluciones repetidas de nombres internos
+## web_fingerprint.sh
 
-##web_fingerprint.sh
-Objetivo
-Identificar tecnologías web y configuraciones expuestas sin realizar escaneos agresivos.
+### Objetivo
 
-Qué hace
-Obtiene cabeceras HTTP y HTTPS
+Identificar **tecnologías web** y **configuraciones expuestas** sin realizar escaneos agresivos.
 
-Detecta tecnologías comunes (PHP, ASP.NET, CMS)
+### Qué hace
 
-Comprueba métodos HTTP permitidos
+* Obtiene cabeceras HTTP y HTTPS
+* Detecta tecnologías comunes (PHP, ASP.NET, CMS)
+* Comprueba métodos HTTP permitidos
+* Busca ficheros sensibles comunes
 
-Busca ficheros sensibles comunes
+### Qué aprende el alumno
 
-Qué aprende el alumno
-Fingerprinting web realista
+* Fingerprinting web realista
+* Identificación de superficie de ataque web
+* Riesgos de filtrado de información en cabeceras
 
-Identificación de superficie de ataque web
+### Detección defensiva
 
-Riesgos de filtrado de información en cabeceras
+* Logs de servidor web
+* Peticiones HTTP OPTIONS
+* Accesos a rutas sensibles
 
-Detección defensiva
-Logs de servidor web
+---
 
-Peticiones HTTP OPTIONS
+## cloud_metadata_enum.sh
 
-Accesos a rutas sensibles
+### Objetivo
 
-cloud_metadata_enum.sh
-Objetivo
-Detectar entornos cloud y exposición de metadatos desde una máquina comprometida.
+Detectar **entornos cloud** y **exposición de metadatos** desde una máquina comprometida.
 
-Qué hace
-Comprueba acceso al servicio de metadatos
+### Qué hace
 
-Identifica proveedor cloud (AWS, Azure, GCP)
+* Comprueba acceso al servicio de metadatos
+* Identifica proveedor cloud (AWS, Azure, GCP)
+* Enumera información básica de la instancia
+* Detecta posibles roles e identidades
 
-Enumera información básica de la instancia
+### Qué aprende el alumno
 
-Detecta posibles roles e identidades
+* Ataques mediante **SSRF**
+* Riesgos del metadata service
+* Impacto de malas configuraciones cloud
 
-Qué aprende el alumno
-Ataques mediante SSRF
+### Detección defensiva
 
-Riesgos del metadata service
+* Tráfico hacia `169.254.169.254`
+* Alertas de IMDS
+* Análisis de flujo de red
 
-Impacto de malas configuraciones cloud
+---
 
-Detección defensiva
-Tráfico hacia 169.254.169.254
+## Uso responsable
 
-Alertas de IMDS
+Estos scripts están diseñados **exclusivamente** para:
 
-Análisis de flujo de red
+* Formación
+* Laboratorios
+* Entornos controlados y autorizados
 
-##Uso responsable
-Estos scripts están diseñados exclusivamente para:
+❌ **No deben utilizarse en sistemas sin consentimiento explícito.**
 
-Formación
-Laboratorios
-Entornos controlados y autorizados
+---
 
-❌ No deben utilizarse en sistemas sin consentimiento explícito.
+## Relación con el ciclo de ataque
 
-##Relación con el ciclo de ataque
 Estos scripts cubren principalmente:
 
-Reconnaissance
-Discovery
-Initial Targeting
+* Reconnaissance
+* Discovery
+* Initial Targeting
 
 Sirven como base para las siguientes fases:
 
-Credential Access
-Lateral Movement
-Persistence
-Siguiente paso recomendado
+* Credential Access
+* Lateral Movement
+* Persistence
+
+---
 
 
 
-© Raul Renales – https://raulrenales.es
+© Raul Renales – [https://raulrenales.es](https://raulrenales.es)
+
