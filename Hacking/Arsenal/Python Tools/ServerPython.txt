@@ -1,0 +1,5 @@
+# Python 2.7.x
+python -m SimpleHTTPServer [puerto]
+ 
+# Python 3.x
+python -m http.server [puerto]
