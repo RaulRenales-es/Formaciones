@@ -36,7 +36,7 @@ recon/
 ├── dns_enum.sh
 ├── web_fingerprint.sh
 └── cloud_metadata_enum.sh
-´´´
+```text
 
 
 ##network_recon.sh
