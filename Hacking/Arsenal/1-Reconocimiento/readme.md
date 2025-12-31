@@ -36,19 +36,18 @@ recon/
 ├── dns_enum.sh
 ├── web_fingerprint.sh
 └── cloud_metadata_enum.sh
-network_recon.sh
+
+text´´´
+
+##network_recon.sh
 Objetivo
 Obtener una visión general de la red local desde un sistema Linux comprometido.
 
 Qué hace
 Enumera interfaces y direcciones IP
-
 Obtiene rutas y gateways
-
 Lista conexiones activas y puertos en escucha
-
 Extrae la tabla ARP
-
 Realiza un ping sweep controlado de la red local
 
 Qué aprende el alumno
@@ -65,7 +64,7 @@ Consultas ARP inusuales
 
 Uso de ss / netstat
 
-network_recon.ps1
+##network_recon.ps1
 Objetivo
 Realizar reconocimiento de red en entornos Windows usando únicamente cmdlets nativos.
 
@@ -92,7 +91,7 @@ Uso anómalo de Get-NetTCPConnection
 
 Tráfico lateral temprano
 
-dns_enum.sh
+##dns_enum.sh
 Objetivo
 Enumerar información DNS interna y externa de forma pasiva.
 
@@ -121,7 +120,7 @@ Consultas DNS SRV
 
 Resoluciones repetidas de nombres internos
 
-web_fingerprint.sh
+##web_fingerprint.sh
 Objetivo
 Identificar tecnologías web y configuraciones expuestas sin realizar escaneos agresivos.
 
@@ -175,43 +174,29 @@ Alertas de IMDS
 
 Análisis de flujo de red
 
-Uso responsable
+##Uso responsable
 Estos scripts están diseñados exclusivamente para:
 
 Formación
-
 Laboratorios
-
 Entornos controlados y autorizados
 
 ❌ No deben utilizarse en sistemas sin consentimiento explícito.
 
-Relación con el ciclo de ataque
+##Relación con el ciclo de ataque
 Estos scripts cubren principalmente:
 
 Reconnaissance
-
 Discovery
-
 Initial Targeting
 
 Sirven como base para las siguientes fases:
 
 Credential Access
-
 Lateral Movement
-
 Persistence
-
 Siguiente paso recomendado
-Continuar con:
 
-credential_hunting.sh
 
-lateral_movement.sh
-
-persistence/
-
-para completar un escenario de ataque realista y didáctico.
 
 © Raul Renales – https://raulrenales.es
