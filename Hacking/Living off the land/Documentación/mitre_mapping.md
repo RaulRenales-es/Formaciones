@@ -1,4 +1,4 @@
-# mitre_mapping.md  
+
 ## Mapeo MITRE ATT&CK – Living off the Land (LotL / LOLBins)
 
 ---
