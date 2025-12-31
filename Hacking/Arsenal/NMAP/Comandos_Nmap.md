@@ -2,7 +2,6 @@
 
 ## Scanning básico
 
-```bash
 # Ping a toda una red de clase C
 nmap -sP 192.168.1.*
 
@@ -20,9 +19,6 @@ nmap -sU -p 0-100 192.168.1.179
 
 # Nmap – Guía rápida de escaneo
 
-## Scanning básico
-
-```bash
 # Ping a toda una red de clase C
 nmap -sP 192.168.1.*
 
@@ -37,6 +33,8 @@ nmap -sF 192.168.1.179
 
 # UDP Scan (puertos 0–100)
 nmap -sU -p 0-100 192.168.1.179
+
+## Scanning avanzado
 
 # Detección de protocolos soportados
 nmap -sO 192.168.1.179
