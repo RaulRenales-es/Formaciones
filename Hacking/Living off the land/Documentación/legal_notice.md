@@ -1,4 +1,4 @@
-# legal_notice.md  
+
 ## Aviso Legal y Condiciones de Uso
 
 ---
