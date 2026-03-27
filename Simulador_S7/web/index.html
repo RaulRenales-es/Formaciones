@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador S7 - HMI</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>SIMULADOR S7</h1>
+    <p>Panel HMI industrial</p>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Bomba principal</h2>
+      <div class="row"><span>Run</span><span id="pump_run" class="lamp red"></span></div>
+      <div class="row"><span>Fault</span><span id="pump_fault" class="lamp red"></span></div>
+      <button onclick="sendCommand('start_pump')">Arrancar</button>
+      <button onclick="sendCommand('stop_pump')">Parar</button>
+    </section>
+
+    <section class="card">
+      <h2>Válvula de entrada</h2>
+      <div class="row"><span>Abierta</span><span id="valve_open" class="lamp red"></span></div>
+      <button onclick="sendCommand('open_valve')">Abrir</button>
+      <button onclick="sendCommand('close_valve')">Cerrar</button>
+    </section>
+
+    <section class="card">
+      <h2>Agitador</h2>
+      <div class="row"><span>Run</span><span id="agitator_run" class="lamp red"></span></div>
+      <div class="row"><span>Velocidad</span><strong id="agitator_speed">0</strong></div>
+      <label>Setpoint velocidad
+        <input id="sp_speed" type="number" min="0" max="100" value="30" />
+      </label>
+      <button onclick="setAgitatorSpeed()">Aplicar velocidad</button>
+    </section>
+
+    <section class="card">
+      <h2>Depósito</h2>
+      <div class="row"><span>Nivel</span><strong id="tank_level">0</strong>%</div>
+      <label>Setpoint nivel
+        <input id="sp_level" type="number" min="0" max="100" value="60" />
+      </label>
+      <button onclick="setLevelSetpoint()">Aplicar nivel</button>
+    </section>
+
+    <section class="card">
+      <h2>Alarmas</h2>
+      <div class="row"><span>Low level</span><span id="alarm_low_level" class="lamp red"></span></div>
+      <div class="row"><span>High level</span><span id="alarm_high_level" class="lamp red"></span></div>
+      <div class="row"><span>E-Stop</span><span id="emergency_stop" class="lamp red"></span></div>
+      <button onclick="setEmergency(true)">Activar E-Stop</button>
+      <button onclick="setEmergency(false)">Liberar E-Stop</button>
+      <button onclick="sendCommand('reset_alarms')">Reset alarmas</button>
+    </section>
+  </main>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
