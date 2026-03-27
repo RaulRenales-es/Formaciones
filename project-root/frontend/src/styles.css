@@ -1,0 +1,94 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: #0f1722;
+  color: #eaf2ff;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1d2f48 0%, #0f1722 55%);
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+header h1 { margin: 0; }
+header p { margin: 6px 0; color: #c7d8ef; }
+.connection { font-weight: 600; color: #ffd76e; }
+
+.diagram-card,
+.plc-card {
+  background: rgba(14, 23, 35, 0.92);
+  border: 1px solid #2e3d53;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.plant-svg { width: 100%; height: auto; }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  gap: 16px;
+}
+
+.plc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plc-header h2 { margin: 0; }
+.plc-header p { margin: 4px 0 0; color: #a9bfdc; }
+
+.lamp {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #213142;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+.lamp.green { background: #3bd96f; box-shadow: 0 0 12px rgba(59, 217, 111, 0.8); }
+.lamp.red { background: #ef4444; box-shadow: 0 0 12px rgba(239, 68, 68, 0.8); }
+
+.badges { display: flex; gap: 8px; margin: 10px 0; flex-wrap: wrap; }
+.badge { border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 600; }
+.badge-green { background: #14532d; color: #bbf7d0; }
+.badge-red { background: #7f1d1d; color: #fecaca; }
+.badge-muted { background: #1f2937; color: #d1d5db; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 7px; border-bottom: 1px solid #233044; text-align: left; }
+th { color: #b9cbe3; }
+.row-alert { background: rgba(143, 30, 30, 0.35); }
+
+.card-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #305da8;
+  color: #e8f1ff;
+  cursor: pointer;
+}
+button:hover { background: #3f77d0; }
+
+footer { color: #a5b8d4; }
+
+@media (max-width: 640px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .card-footer { flex-direction: column; align-items: flex-start; }
+}

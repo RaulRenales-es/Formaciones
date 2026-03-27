@@ -1,0 +1,51 @@
+services:
+  plc1:
+    build: ./plc1
+    container_name: otlab_plc1
+    ports:
+      - "15021:15021"
+    environment:
+      - MODBUS_PORT=15021
+    networks:
+      - otlab_net
+
+  plc2:
+    build: ./plc2
+    container_name: otlab_plc2
+    ports:
+      - "15022:15022"
+    environment:
+      - MODBUS_PORT=15022
+    networks:
+      - otlab_net
+
+  backend:
+    build: ./backend
+    container_name: otlab_backend
+    depends_on:
+      - plc1
+      - plc2
+    ports:
+      - "8000:8000"
+    environment:
+      - POLL_INTERVAL=1
+      - LOG_LEVEL=INFO
+    networks:
+      - otlab_net
+
+  frontend:
+    build: ./frontend
+    container_name: otlab_frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE=http://localhost:8000
+      - VITE_WS_BASE=ws://localhost:8000/ws/status
+    networks:
+      - otlab_net
+
+networks:
+  otlab_net:
+    driver: bridge
