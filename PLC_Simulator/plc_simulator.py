@@ -1,6 +1,3 @@
-"""Script principal para iniciar dos PLCs simulados por Modbus TCP."""
-"""Creado por Raúl Renales Agüero."""
-
 from __future__ import annotations
 
 import signal
