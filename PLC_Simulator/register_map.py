@@ -1,4 +1,5 @@
 """Mapas y constantes de registros para PLCs simulados."""
+"""Creado por Raúl Renales."""
 
 # PLC-1 (unit_id=1)
 PLC1_UNIT_ID = 1
