@@ -1,4 +1,4 @@
-# PLC Simulator
+# PLC Simulator by Raúl Renales
 
 Simulador didáctico local de **dos PLC industriales** usando **Modbus TCP** con Python 3.
 
