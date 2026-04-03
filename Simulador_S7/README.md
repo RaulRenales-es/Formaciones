@@ -1,4 +1,4 @@
-# Simulador S7
+# Simulador S7 by Raúl Renales Agüero
 
 Simulador de proceso industrial con:
 - Servidor Siemens S7 (DB1) usando `python-snap7`.
