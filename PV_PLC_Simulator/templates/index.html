@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PV PLC Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>PV_PLC_Simulator</h1>
+      <p>HMI de demostración - actualización cada 1 segundo</p>
+    </header>
+
+    <main class="dashboard">
+      <section class="panel" id="panel-solar">
+        <div class="panel-header">
+          <h2>PLC Solar</h2>
+          <span class="status-dot" id="solar-status-dot"></span>
+          <span class="status-text" id="solar-status-text">Cargando...</span>
+        </div>
+
+        <div class="cards-grid" id="solar-cards">
+          <!-- Completado por app.js -->
+        </div>
+      </section>
+
+      <section class="panel" id="panel-battery">
+        <div class="panel-header">
+          <h2>PLC Baterías</h2>
+          <span class="status-dot" id="battery-status-dot"></span>
+          <span class="status-text" id="battery-status-text">Cargando...</span>
+        </div>
+
+        <div class="cards-grid" id="battery-cards">
+          <!-- Completado por app.js -->
+        </div>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', path='app.js') }}"></script>
+  </body>
+</html>
