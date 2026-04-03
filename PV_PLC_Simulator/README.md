@@ -1,4 +1,4 @@
-# PV_PLC_Simulator
+# PV_PLC_Simulator by Raul Renales
 
 Simulador didáctico de una instalación fotovoltaica con dos PLCs lógicos en memoria y una HMI web.
 
