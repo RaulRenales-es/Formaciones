@@ -1,4 +1,5 @@
 """Utilidades para crear servidores Modbus TCP de PLC simulados."""
+"""Creado por Raúl Renales Agüero"""
 
 from __future__ import annotations
 
